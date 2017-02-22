@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Profile!</h1>
+            {{ form_start(form) }}
+                {{ form_row(form.email) }}
+                {#{{ form_row(form.name) }}#}
+                {{ form_row(form.plainPassword.first, {
+                    'label': 'Password'
+                }) }}
+                {{ form_row(form.plainPassword.second, {
+                    'label': 'Repeat Password'
+                }) }}
+                <button type="submit" class="btn btn-primary" formnovalidate>Profile</button>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
