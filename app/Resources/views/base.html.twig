@@ -22,13 +22,13 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="{{ path('homepage') }}">Smart Shares</a>
+                        <a class="navbar-brand" href="{{ path('homepage') }}">Security Bootstrap</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li{% if 'homepage' == app.request.attributes.get('_route') %} class="active"{% endif %}><a href="{{ path('homepage') }}">Home</a></li>
-                            <li{% if 'about' == app.request.attributes.get('_route') %} class="active"{% endif %}><a href="#">About</a></li>
-                            <li{% if 'contact' == app.request.attributes.get('_route') %} class="active"{% endif %}><a href="#">Contact</a></li>
+                            <li{% if 'user_profile' == app.request.attributes.get('_route') %} class="active"{% endif %}><a href="{{ path('user_profile') }}">Profile</a></li>
+                            <li{% if 'admin_index' == app.request.attributes.get('_route') %} class="active"{% endif %}><a href="{{ path('admin_index') }}">Admin</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             {% if is_granted('ROLE_USER') %}
