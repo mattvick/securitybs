@@ -32,3 +32,11 @@ monolog:
 
 #swiftmailer:
 #    delivery_addresses: ['me@example.com']
+
+#hautelook_alice:
+#    fixtures_path: 'Resources/fixtures/orm'
+#
+#fidry_alice_data_fixtures:
+#    db_drivers:
+#        doctrine_orm: ~
+#        eloquent_orm: ~
