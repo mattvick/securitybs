@@ -75,7 +75,7 @@ class User implements UserInterface
             $roles[] = 'ROLE_USER';
         }
 
-        // Groups are usually overkill: USE Role Hierarchy it's simplier :)
+        // Groups are usually overkill: USE Role Hierarchy it's simpler :)
         // loop over some ManyToMany relation to a Group entity
 //        foreach ($this->groups as $group) {
 //            $roles = array_merge($roles, $group->getRoles());
