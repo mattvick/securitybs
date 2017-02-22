@@ -17,3 +17,5 @@
 
 *.sublime-project
 *.sublime-workspace
+
+.idea
