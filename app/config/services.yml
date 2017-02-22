@@ -7,3 +7,21 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+
+    app.security.login_form_authenticator:
+        class: AppBundle\Security\LoginFormAuthenticator
+        autowire: true
+
+    app.doctrine.hash_password_listener:
+        class: AppBundle\Doctrine\HashPasswordListener
+        autowire: true
+        tags:
+            - { name: doctrine.event_subscriber }
+
+    # Roles not updated on each request:
+    # https://github.com/symfony/symfony/issues/12025
+#    app.security.user_voter:
+#        class: AppBundle\Security\UserVoter
+#        tags:
+#            - { name: security.voter, priority: 245 } # priority is important to override the default
+#        public: false                                 # small performance boost
